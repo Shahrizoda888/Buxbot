@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 from string import Template
-bot=telebot.TeleBot('1798929012:AAECpRSEsUqv_A6DRJfdFMiwxGm6L0GAgz4')
+bot=telebot.TeleBot('1773747655:AAGClWdL2OyaEPRuGrXvMNIp4itmW-2XeTA')
 user_dict = {}
 class User:
     def __init__(self,city):
@@ -45,7 +45,7 @@ def print_all_commands(call):
 
                 @bot.message_handler(func=lambda message: message.text == 'Biz haqimizda')
                 def send_welcome(message):
-                    msg = bot.reply_to(message, "https://telegra.ph/IT-PARK-BUXORO-03-29")
+                    msg = bot.reply_to(message, "#")
                         
 
                 @bot.message_handler(func=lambda message: message.text == "Registratsiya")
@@ -206,7 +206,7 @@ def print_all_commands(call):
 
             @bot.message_handler(func=lambda message: message.text == "O нас")
             def send_welcome(message):
-                msg = bot.reply_to(message, 'https://telegra.ph/IT-PARK-BUHARA-03-29' )
+                msg = bot.reply_to(message, '#' )
 
 #reg/
 
