@@ -319,7 +319,7 @@ def print_all_commands(call):
                 user.soha = message.text
 
        
-                bot.send_message(chat_id, getRegData(user, 'tg name', message.from_user.first_name), parse_mode="Markdown")
+                bot.send_message(chat_id, getRegData(user, 'tg_name', message.from_user.first_name), parse_mode="Markdown")
         
                 bot.send_message('-1001466284053', getRegData(user, 'Заявка от бота', bot.get_me().username), parse_mode="Markdown")
                 markup = types.ReplyKeyboardRemove(selective=False)
