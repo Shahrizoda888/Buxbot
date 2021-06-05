@@ -45,7 +45,7 @@ def print_all_commands(call):
 
                 @bot.message_handler(func=lambda message: message.text == 'Biz haqimizda')
                 def send_welcome(message):
-                    msg = bot.reply_to(message, "#")
+                    msg = bot.reply_to(message, "https://t.me/itclubbux")
                         
 
                 @bot.message_handler(func=lambda message: message.text == "Registratsiya")
@@ -206,7 +206,7 @@ def print_all_commands(call):
 
             @bot.message_handler(func=lambda message: message.text == "O нас")
             def send_welcome(message):
-                msg = bot.reply_to(message, '#' )
+                msg = bot.reply_to(message, 'https://t.me/itclubbux' )
 
 #reg/
 
