@@ -21,7 +21,7 @@ def home(message):
         
         itembtn2=types.InlineKeyboardButton(text="🇷🇺Русский",callback_data="ru")
         markup.add(itembtn1,itembtn2)
-        msg = bot.send_message(message.chat.id, "🇺🇿O'zingizga kerakli tilni tanlang👇\n\n🇷🇺Выберите нужный язык.👇", reply_markup=markup)
+        msg = bot.send_message(message.chat.id, "🇺🇿O'zingizga   kerakli tilni tanlang👇\n\n🇷🇺Выберите нужный язык.👇", reply_markup=markup)
        
 
        
