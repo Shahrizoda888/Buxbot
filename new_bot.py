@@ -88,10 +88,9 @@ def print_all_commands(call):
                         user = user_dict[chat_id]
                         user.FIO = message.text
                         markup = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
-                        itembnt1=types.KeyboardButton('📲 Telefon raqamimni yuborish',request_contact=True)
-                        markup.add(itembnt1)
-                        msg = bot.send_message(message.chat.id, text="Telegram yoqilgan telefon raqamingizni kontakt ko'rinishida yuboring\n"+
-                                                                "Buning uchun  📲Telefon raqamimni yuborish tugmasini bosing", reply_markup=markup)
+                       
+                        
+                        msg = bot.send_message(message.chat.id, text="Telefon raqamingizni yuboring", reply_markup=markup)
                         bot.register_next_step_handler(msg, process_phone_step)
                     except Exception as e:
                         msg = bot.reply_to(message, 'Iltimos yoshingizni qaytadan kiriting')
@@ -107,7 +106,7 @@ def print_all_commands(call):
         
                         chat_id = message.chat.id
                         user = user_dict[chat_id]
-                        user.phone = message.contact.phone_number
+                        user.phone= message.text
         
                         markup = types.ReplyKeyboardMarkup(one_time_keyboard=True, resize_keyboard=True)
                         itembnt3=types.KeyboardButton('Buxoro sh')
@@ -127,8 +126,7 @@ def print_all_commands(call):
                         msg = bot.send_message(chat_id,'Siz qaysi shahar/tumandansiz?', reply_markup=markup)
                         bot.register_next_step_handler(msg, process_malumot_step)
                     except Exception as e:
-                        msg = bot.reply_to(message, text="Telegram yoqilgan telefon raqamingizni kontakt ko'rinishida yuboring\n"+
-                                                    "Buning uchun 📲 Telefon raqamimni yuborish tugmasini bosing.")
+                        msg = bot.reply_to(message, text="Telefon raqamingizni yuboring")
                         bot.register_next_step_handler(msg, process_phone_step)
 
 
@@ -246,10 +244,8 @@ def print_all_commands(call):
                     user = user_dict[chat_id]
                     user.FIO = message.text
                     markup = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
-                    itembnt1=types.KeyboardButton('📲 Отправить мой контакт',request_contact=True)
-                    markup.add(itembnt1)
-                    msg = bot.send_message(message.chat.id, 'Отправьте свой номер в виде контакта\n\n'+
-                                                            'Для этого нажмите на кнопку 📲 Отправить мой контакт', reply_markup=markup)
+            
+                    msg = bot.send_message(message.chat.id, 'Отправьте свой номер телефона', reply_markup=markup)
                     bot.register_next_step_handler(msg, process_phone_step)
                 except Exception as e:
                     msg = bot.reply_to(message, 'Пожалуйста, введите свой возраст правильно')
@@ -263,7 +259,7 @@ def print_all_commands(call):
         
                     chat_id = message.chat.id
                     user = user_dict[chat_id]
-                    user.phone = message.contact.phone_number
+                    user.phone = message.text
         
                     markup = types.ReplyKeyboardMarkup(one_time_keyboard=True, resize_keyboard=True)
                     itembnt3=types.KeyboardButton('г.Бухоро ')
@@ -283,8 +279,7 @@ def print_all_commands(call):
                     msg = bot.send_message(chat_id, 'Выберите район', reply_markup=markup)
                     bot.register_next_step_handler(msg, process_malumot_step)
                 except Exception as e:
-                    msg = bot.reply_to(message, 'Отправьте свой номер в виде контакта\n\n'+
-                                                'Для этого нажмите на кнопку 📲 Отправить мой контакт')
+                    msg = bot.reply_to(message, 'Отправьте свой номер телефона')
                     bot.register_next_step_handler(msg, process_phone_step)
 
 
